@@ -1,0 +1,23 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	x:Class="AnimeSnow.SettingWindow"
+	x:Name="Window"
+	Title="设置"
+	Width="264" Height="226" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/AnimeSnow;component/Res/Icon/icon.png">
+
+	<Grid x:Name="LayoutRoot">
+		<Slider x:Name="sliderMiddium" Margin="23,40,19,0" VerticalAlignment="Top" Style="{DynamicResource SimpleSlider}" d:LayoutOverrides="HorizontalAlignment" Maximum="1" LargeChange="0.05" SmallChange="0.01"/>
+		<Slider x:Name="sliderSmall" Margin="23,86,19,0" VerticalAlignment="Top" Style="{DynamicResource SimpleSlider}" Maximum="1" LargeChange="0.05" SmallChange="0.01" d:LayoutOverrides="HorizontalAlignment"/>
+		<TextBlock HorizontalAlignment="Left" Margin="23,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="zh-cn" Text=" 透明度设置1"/></TextBlock>
+		<TextBlock HorizontalAlignment="Left" Margin="23,66.163,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="zh-cn" Text=" 透明度设置2"/></TextBlock>
+		<ComboBox x:Name="comboboxWindowState" Margin="23,0,106,22.163" Style="{DynamicResource SimpleComboBox}" VerticalAlignment="Bottom" SelectedIndex="0">
+			<ComboBoxItem Content="置于顶层"/>
+			<ComboBoxItem Content="置于底层"/>
+		</ComboBox>
+		<CheckBox x:Name="checkboxRunStartup" Content="开机启动" HorizontalAlignment="Right" Margin="0,0,19,25.163" VerticalAlignment="Bottom" Style="{DynamicResource SimpleCheckBox}"/>
+		<Slider x:Name="sliderSpeed" Margin="23,128,19,0" VerticalAlignment="Top" Style="{DynamicResource SimpleSlider}" Maximum="1.5" LargeChange="0.05" SmallChange="0.01" d:LayoutOverrides="HorizontalAlignment" Value="1" Minimum="-1"/>
+		<TextBlock HorizontalAlignment="Left" Margin="23,0,0,73.163" TextWrapping="Wrap" VerticalAlignment="Bottom"><Run Language="zh-cn" Text="速度"/></TextBlock>
+	</Grid>
+</Window>
